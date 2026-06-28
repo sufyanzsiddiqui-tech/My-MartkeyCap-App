@@ -107,7 +107,7 @@ export function PriceChart({ symbol }: { symbol: string }) {
                   fontSize: 12,
                 }}
                 labelFormatter={(t) => new Date(t).toLocaleString()}
-                formatter={(v: number) => [fmtMoney(v), "Price"]}
+                formatter={(v) => [fmtMoney(Number(v)), "Price"]}
               />
               <Area type="monotone" dataKey="price" stroke={stroke} strokeWidth={2} fill="url(#priceFill)" />
             </AreaChart>

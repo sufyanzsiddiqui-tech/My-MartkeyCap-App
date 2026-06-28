@@ -52,7 +52,7 @@ export function StatisticsChart() {
                 color: isDark ? "#e2e8f0" : "#0f172a",
                 fontSize: 12,
               }}
-              formatter={(value: number) => [`$${value.toLocaleString()}`, "Value"]}
+              formatter={(value) => [`$${Number(value).toLocaleString()}`, "Value"]}
             />
             <Area
               type="monotone"
