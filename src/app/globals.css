@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* MarketCap design tokens — premium blue & white in light, deep navy in dark.
+   Dark mode swaps these via the .dark class on <html>, so all surfaces and
+   brand colors flip without depending on Tailwind's `dark:` variant. */
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-2: #f3f5f9;
+  --surface-hover: #f7f9fc;
+  --border: #e6e9ef;
+  --border-soft: #eef0f4;
+
+  --text: #0f172a;
+  --text-muted: #4b5563;
+  --text-subtle: #94a3b8;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-soft: #eff6ff;
+  --primary-soft-fg: #1d4ed8;
+  --primary-soft-border: #bfdbfe;
+  --primary-soft-hover: #dbeafe;
+
+  --success-bg: #dcfce7;
+  --success-fg: #16a34a;
+  --danger-bg: #fee2e2;
+  --danger-fg: #dc2626;
+}
+
+.dark {
+  --bg: #0a0f1c;
+  --surface: #0f1626;
+  --surface-2: #131b2e;
+  --surface-hover: #1a233a;
+  --border: #1e293b;
+  --border-soft: #1e293b;
+
+  --text: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --text-subtle: #64748b;
+
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-soft: #1e3a8a33;
+  --primary-soft-fg: #93c5fd;
+  --primary-soft-border: #1e40af;
+  --primary-soft-hover: #1e40af66;
+
+  --success-bg: #16a34a26;
+  --success-fg: #34d399;
+  --danger-bg: #dc262626;
+  --danger-fg: #f87171;
+}
+
+html,
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
